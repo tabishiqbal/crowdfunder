@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+#ruby "2.1.2p95"
 
 gem 'rails', '4.1.5'
 gem 'sqlite3'
@@ -16,10 +17,19 @@ gem "paperclip", "~> 4.2"
 gem "cocoon"
 
 
+# group :production do
+	# gem 'pg'
+	# gem 'rails_12factor'
+	# gem 'unicorn'
+# end
 
 
-# Use unicorn as the app server
-# gem 'unicorn'
+# group :development, :test do
+# 	gem 'sqlite3'
+# 	gem 'spring'
+# 	gem 'rspec'
+# end
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

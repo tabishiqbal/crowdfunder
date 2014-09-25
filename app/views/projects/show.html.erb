@@ -19,12 +19,12 @@
 
 <p>
   <strong>Start date:</strong>
-  <%= @project.start_date %>
+  <%= @project.start_date.to_date %>
 </p>
 
 <p>
   <strong>End date:</strong>
-  <%= @project.end_date %>
+  <%= @project.end_date.to_date %>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-link" %> |

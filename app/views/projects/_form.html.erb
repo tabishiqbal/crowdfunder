@@ -16,26 +16,43 @@
     <%= f.label :name %><br>
     <%= f.text_field :name, class: "form-control" %>
   </div>
+
   <div class="form-group">
     <%= f.label :description %><br>
     <%= f.text_area :description, class: "form-control" %>
   </div>
+
   <div class="form-group">
     <%= f.label :funding_goal %><br>
     <%= f.text_field :funding_goal, class: "form-control" %>
   </div>
+
   <div class="form-group">
     <%= f.label :start_date %><br>
-    <%= f.datetime_select :start_date, class: "form-control" %>
+    <%= f.date_select :start_date, class: "form-control" %>
   </div>
+
   <div class="form-group">
     <%= f.label :end_date %><br>
-    <%= f.datetime_select :end_date, class: "form-control" %>
+    <%= f.date_select :end_date, class: "form-control" %>
   </div>
+  
+
+  <!-- Nested forms -->
+
+  <div class="form-group">
+    <h2>Rewards</h2>
+      <%= f.fields_for :rewards do |reward| %>
+        <%= render 'reward_fields', :f => reward %>
+      <% end %>
+      <%= link_to_add_association 'add reward', f, :rewards %>
+  </div>
+
   <div class="form-group">
     <%= f.label :image %><br>
     <%= f.file_field :image, class: "form-control" %>
   </div>
+
   <div class="actions">
     <%= f.submit class: "btn btn-primary" %>
   </div>
