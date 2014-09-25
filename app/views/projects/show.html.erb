@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @project.image.url(:medium) %>
+
 <p>
   <strong>Name:</strong>
   <%= @project.name %>
@@ -12,7 +14,7 @@
 
 <p>
   <strong>Funding goal:</strong>
-  <%= @project.funding_goal %>
+  <%= number_to_currency(@project.funding_goal) %>
 </p>
 
 <p>

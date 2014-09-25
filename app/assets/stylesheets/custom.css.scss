@@ -1,2 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.navbar-default {
+	background-color: #F3DF79;
+	height: 88px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+}
+
+.center {
+	text-align: center;
+}
